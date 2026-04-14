@@ -8,7 +8,8 @@ import {
   Activity,
   Shield,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  BookMarked
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -16,6 +17,7 @@ const navItems = [
   { label: 'Dashboard', icon: LayoutDashboard, path: '/' },
   { label: 'New Case', icon: Plus, path: '/case/new' },
   { label: 'Case Library', icon: FileText, path: '/cases' },
+  { label: 'Criteria DB', icon: BookMarked, path: '/criteria' },
   { label: 'Analytics', icon: Activity, path: '/analytics' },
   { label: 'Settings', icon: Settings, path: '/settings' },
 ];

@@ -17,6 +17,7 @@ import AIRecommendation from '@/components/case/AIRecommendation';
 import SOAPGenerator from '@/components/case/SOAPGenerator';
 import FileUpload from '@/components/case/FileUpload';
 import AmbientAI from '@/components/case/AmbientAI';
+import CriteriaMatcher from '@/components/criteria/CriteriaMatcher';
 
 const emptyCase = {
   patient_name: '',
@@ -181,6 +182,9 @@ export default function CaseReview() {
             <DiagnosisCodes primaryDx={formData.primary_dx} procedureCode={formData.procedure_code} />
           </div>
 
+          {/* AI Criteria Matcher */}
+          <CriteriaMatcher primaryDx={formData.primary_dx} procedureCode={formData.procedure_code} />
+
           {/* Ambient AI */}
           <AmbientAI onCapture={handleAmbientCapture} />
 
@@ -231,6 +235,7 @@ export default function CaseReview() {
             <PatientSnapshot data={formData} />
             <DiagnosisCodes primaryDx={formData.primary_dx} procedureCode={formData.procedure_code} />
           </div>
+          <CriteriaMatcher primaryDx={formData.primary_dx} procedureCode={formData.procedure_code} />
           <AIRecommendation
             caseData={formData}
             value={formData.ai_recommendation}

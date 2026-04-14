@@ -1,0 +1,121 @@
+{
+  "name": "ClinicalCriteria",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Name/title of the criteria set"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "Milliman",
+        "InterQual",
+        "CMS",
+        "MCG",
+        "Hayes",
+        "UpToDate",
+        "AHA",
+        "ACS",
+        "ACC",
+        "Other"
+      ],
+      "description": "Evidence source or publisher"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Inpatient Admission",
+        "Surgical Procedure",
+        "Diagnostic Imaging",
+        "Behavioral Health",
+        "Skilled Nursing",
+        "Home Health",
+        "Outpatient Service",
+        "DME",
+        "Pharmacy",
+        "Rehabilitation"
+      ],
+      "description": "Clinical category"
+    },
+    "icd10_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Relevant ICD-10 diagnosis codes"
+    },
+    "cpt_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Relevant CPT/procedure codes"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Search keywords and clinical terms"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Plain-language summary of the criteria"
+    },
+    "admission_criteria": {
+      "type": "string",
+      "description": "Criteria required for admission/authorization"
+    },
+    "continued_stay_criteria": {
+      "type": "string",
+      "description": "Criteria required to justify continued stay"
+    },
+    "discharge_criteria": {
+      "type": "string",
+      "description": "Criteria indicating readiness for discharge"
+    },
+    "typical_los_days": {
+      "type": "number",
+      "description": "Typical length of stay in days"
+    },
+    "los_range_min": {
+      "type": "number",
+      "description": "Minimum LOS in days"
+    },
+    "los_range_max": {
+      "type": "number",
+      "description": "Maximum LOS in days"
+    },
+    "evidence_level": {
+      "type": "string",
+      "enum": [
+        "Level I",
+        "Level II",
+        "Level III",
+        "Expert Consensus",
+        "CMS Mandate"
+      ],
+      "description": "Strength of evidence"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date criteria was last updated"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional clinical notes or caveats"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this criteria set is currently in use"
+    }
+  },
+  "required": [
+    "title",
+    "source",
+    "category"
+  ]
+}
