@@ -11,7 +11,8 @@ import {
   ChevronRight,
   BookMarked,
   BarChart2,
-  Radio
+  Radio,
+  BookOpen
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -24,6 +25,7 @@ const navItems = [
   { label: 'Productivity', icon: BarChart2, path: '/productivity' },
   { label: 'Analytics', icon: Activity, path: '/analytics' },
   { label: 'Settings', icon: Settings, path: '/settings' },
+  { label: 'User Guide', icon: BookOpen, path: '/tutorial' },
 ];
 
 export default function Sidebar({ collapsed, onToggle }) {

@@ -14,6 +14,7 @@ import Settings from '@/pages/Settings';
 import CriteriaDatabase from '@/pages/CriteriaDatabase';
 import Productivity from '@/pages/Productivity';
 import Rounds from '@/pages/Rounds';
+import Tutorial from '@/pages/Tutorial';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -51,6 +52,7 @@ const AuthenticatedApp = () => {
         <Route path="/criteria" element={<CriteriaDatabase />} />
         <Route path="/productivity" element={<Productivity />} />
         <Route path="/rounds" element={<Rounds />} />
+        <Route path="/tutorial" element={<Tutorial />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
