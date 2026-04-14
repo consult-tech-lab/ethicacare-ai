@@ -6,7 +6,6 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
 
 const sourceColors = {
-  Milliman:  'bg-blue-100 text-blue-700',
   InterQual: 'bg-amber-100 text-amber-700',
   CMS:       'bg-green-100 text-green-700',
   MCG:       'bg-purple-100 text-purple-700',

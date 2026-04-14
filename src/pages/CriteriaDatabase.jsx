@@ -13,7 +13,7 @@ import { toast } from 'sonner';
 import CriteriaCard from '@/components/criteria/CriteriaCard';
 import CriteriaDetail from '@/components/criteria/CriteriaDetail';
 
-const SOURCES = ['All Sources', 'Milliman', 'InterQual', 'CMS', 'MCG', 'Hayes', 'AHA', 'ACS', 'ACC', 'Other'];
+const SOURCES = ['All Sources', 'InterQual', 'CMS', 'MCG', 'Hayes', 'AHA', 'ACS', 'ACC', 'Other'];
 const CATEGORIES = [
   'All Categories', 'Inpatient Admission', 'Surgical Procedure', 'Diagnostic Imaging',
   'Behavioral Health', 'Skilled Nursing', 'Home Health', 'Outpatient Service',

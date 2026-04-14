@@ -4,7 +4,6 @@ import { Clock, BookOpen, ChevronRight, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const sourceColors = {
-  Milliman:  'bg-blue-100 text-blue-700 border-blue-200',
   InterQual: 'bg-amber-100 text-amber-700 border-amber-200',
   CMS:       'bg-green-100 text-green-700 border-green-200',
   MCG:       'bg-purple-100 text-purple-700 border-purple-200',

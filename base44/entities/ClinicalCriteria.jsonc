@@ -9,7 +9,6 @@
     "source": {
       "type": "string",
       "enum": [
-        "Milliman",
         "InterQual",
         "CMS",
         "MCG",
