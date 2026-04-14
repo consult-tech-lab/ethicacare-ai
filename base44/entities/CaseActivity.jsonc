@@ -1,0 +1,112 @@
+{
+  "name": "CaseActivity",
+  "type": "object",
+  "properties": {
+    "reviewer_email": {
+      "type": "string",
+      "description": "Email of the UM nurse/reviewer who completed the case"
+    },
+    "reviewer_name": {
+      "type": "string",
+      "description": "Display name of the reviewer"
+    },
+    "patient_name": {
+      "type": "string",
+      "description": "Patient name"
+    },
+    "mrn": {
+      "type": "string",
+      "description": "Medical Record Number"
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the case was completed/approved"
+    },
+    "review_type": {
+      "type": "string",
+      "enum": [
+        "utilization_review",
+        "secondary_review"
+      ],
+      "description": "Type of review performed"
+    },
+    "primary_dx": {
+      "type": "string",
+      "description": "Primary diagnosis code and description"
+    },
+    "dx_category": {
+      "type": "string",
+      "enum": [
+        "Cardiac",
+        "Pulmonary",
+        "Renal",
+        "Neurological",
+        "Orthopedic",
+        "Oncology",
+        "Behavioral Health",
+        "Surgical",
+        "GI",
+        "Infectious Disease",
+        "Endocrine",
+        "Other"
+      ],
+      "description": "Diagnosis category"
+    },
+    "medical_service": {
+      "type": "string",
+      "enum": [
+        "Cardiology",
+        "Pulmonology",
+        "Nephrology",
+        "Neurology",
+        "Orthopedics",
+        "Oncology",
+        "Psychiatry",
+        "General Surgery",
+        "Gastroenterology",
+        "Infectious Disease",
+        "Internal Medicine",
+        "Endocrinology"
+      ],
+      "description": "Medical service line"
+    },
+    "insurance": {
+      "type": "string",
+      "description": "Insurance payer"
+    },
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "denied",
+        "pending_info"
+      ],
+      "description": "Final outcome of the review"
+    },
+    "los_days": {
+      "type": "number",
+      "description": "Length of stay in days"
+    },
+    "criteria_used": {
+      "type": "string",
+      "enum": [
+        "InterQual",
+        "MCG",
+        "CMS",
+        "Hayes",
+        "Other"
+      ],
+      "description": "Clinical criteria used for the review"
+    },
+    "turnaround_hours": {
+      "type": "number",
+      "description": "Hours from case open to completion"
+    }
+  },
+  "required": [
+    "reviewer_email",
+    "completed_date",
+    "review_type"
+  ]
+}

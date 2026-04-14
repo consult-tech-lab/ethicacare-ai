@@ -12,6 +12,7 @@ import CaseLibrary from '@/pages/CaseLibrary';
 import Analytics from '@/pages/Analytics';
 import Settings from '@/pages/Settings';
 import CriteriaDatabase from '@/pages/CriteriaDatabase';
+import Productivity from '@/pages/Productivity';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -47,6 +48,7 @@ const AuthenticatedApp = () => {
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/criteria" element={<CriteriaDatabase />} />
+        <Route path="/productivity" element={<Productivity />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

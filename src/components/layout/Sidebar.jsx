@@ -9,7 +9,8 @@ import {
   Shield,
   ChevronLeft,
   ChevronRight,
-  BookMarked
+  BookMarked,
+  BarChart2
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -18,6 +19,7 @@ const navItems = [
   { label: 'New Case', icon: Plus, path: '/case/new' },
   { label: 'Case Library', icon: FileText, path: '/cases' },
   { label: 'Criteria DB', icon: BookMarked, path: '/criteria' },
+  { label: 'Productivity', icon: BarChart2, path: '/productivity' },
   { label: 'Analytics', icon: Activity, path: '/analytics' },
   { label: 'Settings', icon: Settings, path: '/settings' },
 ];
