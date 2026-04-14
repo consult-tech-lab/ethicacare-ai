@@ -1,0 +1,81 @@
+{
+  "name": "PatientCase",
+  "type": "object",
+  "properties": {
+    "patient_name": {
+      "type": "string",
+      "description": "Full name of the patient"
+    },
+    "mrn": {
+      "type": "string",
+      "description": "Medical Record Number"
+    },
+    "insurance": {
+      "type": "string",
+      "description": "Insurance provider name"
+    },
+    "admission_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of admission"
+    },
+    "primary_dx": {
+      "type": "string",
+      "description": "Primary diagnosis code and description"
+    },
+    "procedure_code": {
+      "type": "string",
+      "description": "Procedure code and description"
+    },
+    "clinical_notes": {
+      "type": "string",
+      "description": "Raw clinical notes from MD"
+    },
+    "soap_summary": {
+      "type": "string",
+      "description": "AI-generated SOAP summary"
+    },
+    "ai_recommendation": {
+      "type": "string",
+      "description": "AI-generated utilization recommendation"
+    },
+    "review_type": {
+      "type": "string",
+      "enum": [
+        "utilization_review",
+        "secondary_review"
+      ],
+      "default": "utilization_review"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "in_review",
+        "approved",
+        "denied",
+        "pending_info"
+      ],
+      "default": "draft"
+    },
+    "nurse_approved": {
+      "type": "boolean",
+      "default": false
+    },
+    "uploaded_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs of uploaded documents"
+    },
+    "voice_transcription": {
+      "type": "string",
+      "description": "Voice-to-text transcription content"
+    }
+  },
+  "required": [
+    "patient_name",
+    "mrn"
+  ]
+}
