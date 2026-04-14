@@ -1,0 +1,84 @@
+{
+  "name": "RoundsPatient",
+  "type": "object",
+  "properties": {
+    "patient_name": {
+      "type": "string"
+    },
+    "mrn": {
+      "type": "string"
+    },
+    "room": {
+      "type": "string"
+    },
+    "admission_status": {
+      "type": "string",
+      "enum": [
+        "Outpatient",
+        "Observation",
+        "Direct Admit",
+        "Inpatient"
+      ],
+      "default": "Inpatient"
+    },
+    "primary_dx": {
+      "type": "string"
+    },
+    "insurance": {
+      "type": "string"
+    },
+    "attending_md": {
+      "type": "string"
+    },
+    "admission_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "los_days": {
+      "type": "number"
+    },
+    "discharge_target_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "assigned_cm": {
+      "type": "string",
+      "description": "Email of assigned case manager"
+    },
+    "ambient_notes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Array of ambient AI captured notes"
+    },
+    "progress_notes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Formally promoted progress notes"
+    },
+    "discharge_barriers": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "routine",
+        "urgent",
+        "critical"
+      ],
+      "default": "routine"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "patient_name",
+    "mrn",
+    "admission_status"
+  ]
+}

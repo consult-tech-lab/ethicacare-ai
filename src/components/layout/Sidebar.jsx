@@ -10,13 +10,15 @@ import {
   ChevronLeft,
   ChevronRight,
   BookMarked,
-  BarChart2
+  BarChart2,
+  Radio
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
   { label: 'Dashboard', icon: LayoutDashboard, path: '/' },
   { label: 'New Case', icon: Plus, path: '/case/new' },
+  { label: 'AI Rounds', icon: Radio, path: '/rounds' },
   { label: 'Case Library', icon: FileText, path: '/cases' },
   { label: 'Criteria DB', icon: BookMarked, path: '/criteria' },
   { label: 'Productivity', icon: BarChart2, path: '/productivity' },
