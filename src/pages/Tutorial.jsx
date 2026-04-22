@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   LayoutDashboard, Plus, Radio, FileText, BookMarked,
-  BarChart2, ChevronRight, BookOpen,
+  BarChart2, ChevronRight, BookOpen, Building2, SlidersHorizontal,
   Menu, X
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -12,9 +12,13 @@ import TutorialRounds from '@/components/tutorial/TutorialRounds';
 import TutorialCaseLibrary from '@/components/tutorial/TutorialCaseLibrary';
 import TutorialCriteria from '@/components/tutorial/TutorialCriteria';
 import TutorialProductivity from '@/components/tutorial/TutorialProductivity';
+import TutorialOverview from '@/components/tutorial/TutorialOverview';
+import TutorialWalkthrough from '@/components/tutorial/TutorialWalkthrough';
 
 
 const SECTIONS = [
+  { id: 'overview',     label: 'Overview & HURO',  icon: Building2,       component: TutorialOverview,    color: 'text-sidebar-primary bg-sidebar/20', badge: 'Start Here' },
+  { id: 'walkthrough',  label: 'Slide Walkthrough', icon: SlidersHorizontal, component: TutorialWalkthrough, color: 'text-accent bg-accent/10', badge: 'New' },
   { id: 'dashboard',    label: 'Dashboard',        icon: LayoutDashboard, component: TutorialDashboard,   color: 'text-primary bg-primary/10' },
   { id: 'new-case',     label: 'New Case Review',  icon: Plus,            component: TutorialNewCase,     color: 'text-green-700 bg-green-100' },
   { id: 'rounds',       label: 'AI Rounds',        icon: Radio,           component: TutorialRounds,      color: 'text-orange-600 bg-orange-100', badge: 'Featured' },
@@ -24,7 +28,7 @@ const SECTIONS = [
 ];
 
 export default function Tutorial() {
-  const [active, setActive] = useState('dashboard');
+  const [active, setActive] = useState('overview');
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const current = SECTIONS.find(s => s.id === active);
