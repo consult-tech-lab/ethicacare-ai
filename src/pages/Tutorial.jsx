@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
   LayoutDashboard, Plus, Radio, FileText, BookMarked,
   BarChart2, ChevronRight, BookOpen, Building2, SlidersHorizontal,
-  Menu, X
+  Menu, X, Camera
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import TutorialDashboard from '@/components/tutorial/TutorialDashboard';
@@ -14,6 +14,7 @@ import TutorialCriteria from '@/components/tutorial/TutorialCriteria';
 import TutorialProductivity from '@/components/tutorial/TutorialProductivity';
 import TutorialOverview from '@/components/tutorial/TutorialOverview';
 import TutorialWalkthrough from '@/components/tutorial/TutorialWalkthrough';
+import ScreenshotDownloader from '@/components/tutorial/ScreenshotDownloader';
 
 
 const SECTIONS = [
@@ -25,6 +26,7 @@ const SECTIONS = [
   { id: 'case-library', label: 'Case Library',     icon: FileText,        component: TutorialCaseLibrary, color: 'text-accent bg-accent/10' },
   { id: 'criteria',     label: 'Criteria Database',icon: BookMarked,      component: TutorialCriteria,    color: 'text-purple-600 bg-purple-100' },
   { id: 'productivity', label: 'Productivity',     icon: BarChart2,       component: TutorialProductivity,color: 'text-chart-3 bg-chart-3/10' },
+  { id: 'screenshots', label: 'Screenshots',      icon: Camera,          component: ScreenshotDownloader, color: 'text-rose-600 bg-rose-100', badge: 'Download' },
 ];
 
 export default function Tutorial() {
