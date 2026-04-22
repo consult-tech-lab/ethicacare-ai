@@ -25,7 +25,7 @@ const navItems = [
   { label: 'Case Library', icon: FileText,        path: '/cases' },
   { label: 'Criteria',     icon: BookMarked,      path: '/criteria' },
   { label: 'Productivity', icon: BarChart2,       path: '/productivity' },
-  { label: 'Research',     icon: FlaskConical,    path: '/research', adminOnly: true },
+  { label: 'Research',     icon: FlaskConical,    path: '/research' },
   { label: 'Settings',     icon: Settings,        path: '/settings' },
   { label: 'User Guide',   icon: BookOpen,        path: '/tutorial' },
 ];

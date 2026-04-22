@@ -8,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import {
   FlaskConical, LayoutGrid, List, Filter, X, Upload, Copy,
-  Download, Mail, GripVertical, Sparkles, Brain, FileText, Shield
+  Download, Mail, GripVertical, Sparkles, Brain, FileText
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
@@ -176,19 +176,6 @@ export default function Research() {
 
   const copyText = (text) => { navigator.clipboard.writeText(text); toast.success('Copied'); };
 
-  // Admin gate
-  if (user && user.role !== 'admin') {
-    return (
-      <div className="flex flex-col items-center justify-center py-32 text-center space-y-4">
-        <div className="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center">
-          <Shield className="w-8 h-8 text-slate-400" />
-        </div>
-        <h2 className="font-heading font-bold text-xl text-foreground">Access Restricted</h2>
-        <p className="text-sm text-muted-foreground max-w-sm">The Research module is only accessible to EthicaCare Auditors and Admins. Contact your administrator for access.</p>
-      </div>
-    );
-  }
-
   const hasFilters = search || mrnFilter || roomFilter || payerFilter !== 'All Payers';
 
   return (
@@ -202,7 +189,7 @@ export default function Research() {
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-xl font-heading font-bold">Research</h1>
-              <span className="text-[10px] font-bold bg-slate-200 text-slate-600 px-2 py-0.5 rounded-full border border-slate-300">ADMIN ONLY</span>
+
             </div>
             <p className="text-xs text-muted-foreground">AI Model Testing Pool — Pre-assigned & manually entered research patients</p>
           </div>
