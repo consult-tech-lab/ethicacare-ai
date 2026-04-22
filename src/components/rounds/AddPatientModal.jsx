@@ -68,6 +68,7 @@ export default function AddPatientModal({ onClose, onSaved }) {
                   <SelectItem value="Observation">Observation</SelectItem>
                   <SelectItem value="Direct Admit">Direct Admit</SelectItem>
                   <SelectItem value="Outpatient">Outpatient</SelectItem>
+                  <SelectItem value="Research">Research (AI Model Testing)</SelectItem>
                 </SelectContent>
               </Select>
             </div>

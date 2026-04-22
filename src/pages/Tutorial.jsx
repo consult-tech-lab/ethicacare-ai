@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   LayoutDashboard, Plus, Radio, FileText, BookMarked,
-  BarChart2, Activity, Settings, ChevronRight, BookOpen,
+  BarChart2, ChevronRight, BookOpen,
   Menu, X
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -12,8 +12,7 @@ import TutorialRounds from '@/components/tutorial/TutorialRounds';
 import TutorialCaseLibrary from '@/components/tutorial/TutorialCaseLibrary';
 import TutorialCriteria from '@/components/tutorial/TutorialCriteria';
 import TutorialProductivity from '@/components/tutorial/TutorialProductivity';
-import TutorialAnalytics from '@/components/tutorial/TutorialAnalytics';
-import TutorialSettings from '@/components/tutorial/TutorialSettings';
+
 
 const SECTIONS = [
   { id: 'dashboard',    label: 'Dashboard',        icon: LayoutDashboard, component: TutorialDashboard,   color: 'text-primary bg-primary/10' },
@@ -22,8 +21,6 @@ const SECTIONS = [
   { id: 'case-library', label: 'Case Library',     icon: FileText,        component: TutorialCaseLibrary, color: 'text-accent bg-accent/10' },
   { id: 'criteria',     label: 'Criteria Database',icon: BookMarked,      component: TutorialCriteria,    color: 'text-purple-600 bg-purple-100' },
   { id: 'productivity', label: 'Productivity',     icon: BarChart2,       component: TutorialProductivity,color: 'text-chart-3 bg-chart-3/10' },
-  { id: 'analytics',    label: 'Analytics',        icon: Activity,        component: TutorialAnalytics,   color: 'text-blue-600 bg-blue-100' },
-  { id: 'settings',     label: 'Settings & Tools', icon: Settings,        component: TutorialSettings,    color: 'text-slate-600 bg-slate-100', badge: 'Featured' },
 ];
 
 export default function Tutorial() {

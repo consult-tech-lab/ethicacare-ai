@@ -19,12 +19,10 @@ export default function ProductivityStatCards({ records }) {
     { label: 'Cases Completed', value: stats.total, icon: CheckCircle2, color: 'bg-accent/10 text-accent' },
     { label: 'Approved', value: stats.approved, icon: CheckCircle2, color: 'bg-green-100 text-green-700' },
     { label: 'Denied', value: stats.denied, icon: XCircle, color: 'bg-red-100 text-red-700' },
-    { label: 'Avg LOS (days)', value: stats.avgLos, icon: Calendar, color: 'bg-primary/10 text-primary' },
-    { label: 'Avg Turnaround (hrs)', value: stats.avgTat, icon: Clock, color: 'bg-chart-3/10 text-chart-3' },
   ];
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
       {cards.map(c => (
         <div key={c.label} className="bg-card rounded-2xl border border-border p-4 shadow-sm">
           <div className={`w-9 h-9 rounded-xl flex items-center justify-center mb-3 ${c.color}`}>

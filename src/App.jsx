@@ -9,12 +9,13 @@ import AppLayout from '@/components/layout/AppLayout';
 import Dashboard from '@/pages/Dashboard';
 import CaseReview from '@/pages/CaseReview';
 import CaseLibrary from '@/pages/CaseLibrary';
-import Analytics from '@/pages/Analytics';
 import Settings from '@/pages/Settings';
 import CriteriaDatabase from '@/pages/CriteriaDatabase';
 import Productivity from '@/pages/Productivity';
 import Rounds from '@/pages/Rounds';
 import Tutorial from '@/pages/Tutorial';
+import RoundsRecall from '@/pages/RoundsRecall';
+import Research from '@/pages/Research';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -47,12 +48,13 @@ const AuthenticatedApp = () => {
         <Route path="/case/new" element={<CaseReview />} />
         <Route path="/case/:id" element={<CaseReview />} />
         <Route path="/cases" element={<CaseLibrary />} />
-        <Route path="/analytics" element={<Analytics />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/criteria" element={<CriteriaDatabase />} />
         <Route path="/productivity" element={<Productivity />} />
         <Route path="/rounds" element={<Rounds />} />
         <Route path="/tutorial" element={<Tutorial />} />
+        <Route path="/rounds-recall" element={<RoundsRecall />} />
+        <Route path="/research" element={<Research />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

@@ -13,7 +13,7 @@ import { toast } from 'sonner';
 import CriteriaCard from '@/components/criteria/CriteriaCard';
 import CriteriaDetail from '@/components/criteria/CriteriaDetail';
 
-const SOURCES = ['All Sources', 'InterQual', 'CMS', 'MCG', 'Hayes', 'AHA', 'ACS', 'ACC', 'Other'];
+const SOURCES = ['All Sources', 'InterQual', 'MCG'];
 const CATEGORIES = [
   'All Categories', 'Inpatient Admission', 'Surgical Procedure', 'Diagnostic Imaging',
   'Behavioral Health', 'Skilled Nursing', 'Home Health', 'Outpatient Service',
@@ -188,9 +188,9 @@ export default function CriteriaDatabase() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-heading font-bold">Clinical Criteria Database</h1>
+          <h1 className="text-2xl font-heading font-bold">Criteria</h1>
           <p className="text-sm text-muted-foreground mt-0.5">
-            {allCriteria.length} criteria sets · Milliman, InterQual, CMS, MCG &amp; more
+            {allCriteria.length} criteria sets · InterQual &amp; MCG
           </p>
         </div>
         <Button onClick={() => setShowAdd(true)} className="gap-2 rounded-xl bg-primary hover:bg-primary/90">

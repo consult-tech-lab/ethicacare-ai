@@ -5,30 +5,32 @@ import {
   FileText, 
   Plus, 
   Settings, 
-  Activity,
   Shield,
   ChevronLeft,
   ChevronRight,
   BookMarked,
   BarChart2,
   Radio,
-  BookOpen
+  BookOpen,
+  FlaskConical,
+  RotateCcw
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { label: 'Dashboard', icon: LayoutDashboard, path: '/' },
-  { label: 'New Case', icon: Plus, path: '/case/new' },
-  { label: 'AI Rounds', icon: Radio, path: '/rounds' },
-  { label: 'Case Library', icon: FileText, path: '/cases' },
-  { label: 'Criteria DB', icon: BookMarked, path: '/criteria' },
-  { label: 'Productivity', icon: BarChart2, path: '/productivity' },
-  { label: 'Analytics', icon: Activity, path: '/analytics' },
-  { label: 'Settings', icon: Settings, path: '/settings' },
-  { label: 'User Guide', icon: BookOpen, path: '/tutorial' },
+  { label: 'Dashboard',    icon: LayoutDashboard, path: '/' },
+  { label: 'New Case',     icon: Plus,            path: '/case/new' },
+  { label: 'AI Rounds',    icon: Radio,           path: '/rounds' },
+  { label: 'Rounds Recall',icon: RotateCcw,       path: '/rounds-recall' },
+  { label: 'Case Library', icon: FileText,        path: '/cases' },
+  { label: 'Criteria',     icon: BookMarked,      path: '/criteria' },
+  { label: 'Productivity', icon: BarChart2,       path: '/productivity' },
+  { label: 'Research',     icon: FlaskConical,    path: '/research', adminOnly: true },
+  { label: 'Settings',     icon: Settings,        path: '/settings' },
+  { label: 'User Guide',   icon: BookOpen,        path: '/tutorial' },
 ];
 
-export default function Sidebar({ collapsed, onToggle }) {
+export default function Sidebar({ collapsed, onToggle, user }) {
   const location = useLocation();
 
   return (
@@ -50,8 +52,8 @@ export default function Sidebar({ collapsed, onToggle }) {
       </div>
 
       {/* Nav */}
-      <nav className="flex-1 py-4 px-3 space-y-1">
-        {navItems.map(item => {
+      <nav className="flex-1 py-4 px-3 space-y-1 overflow-y-auto">
+        {navItems.filter(item => !item.adminOnly || user?.role === 'admin').map(item => {
           const isActive = location.pathname === item.path || 
             (item.path !== '/' && location.pathname.startsWith(item.path));
           return (
@@ -67,6 +69,7 @@ export default function Sidebar({ collapsed, onToggle }) {
             >
               <item.icon className="w-[18px] h-[18px] flex-shrink-0" />
               {!collapsed && <span>{item.label}</span>}
+              {!collapsed && item.adminOnly && <span className="ml-auto text-[8px] bg-sidebar-primary/20 text-sidebar-primary font-bold px-1.5 py-0.5 rounded">ADMIN</span>}
             </Link>
           );
         })}

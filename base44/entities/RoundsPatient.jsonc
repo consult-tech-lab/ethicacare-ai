@@ -17,7 +17,8 @@
         "Outpatient",
         "Observation",
         "Direct Admit",
-        "Inpatient"
+        "Inpatient",
+        "Research"
       ],
       "default": "Inpatient"
     },
@@ -44,6 +45,10 @@
     "assigned_cm": {
       "type": "string",
       "description": "Email of assigned case manager"
+    },
+    "quick_note": {
+      "type": "string",
+      "description": "Quick note added during rounds"
     },
     "ambient_notes": {
       "type": "array",
