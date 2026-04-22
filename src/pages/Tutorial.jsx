@@ -18,15 +18,15 @@ import ScreenshotDownloader from '@/components/tutorial/ScreenshotDownloader';
 
 
 const SECTIONS = [
-  { id: 'overview',     label: 'Overview & HURO',  icon: Building2,       component: TutorialOverview,    color: 'text-sidebar-primary bg-sidebar/20', badge: 'Start Here' },
+  { id: 'overview',     label: 'Overview & HURO',  icon: Building2,        component: TutorialOverview,    color: 'text-sidebar-primary bg-sidebar/20', badge: 'Start Here' },
   { id: 'walkthrough',  label: 'Slide Walkthrough', icon: SlidersHorizontal, component: TutorialWalkthrough, color: 'text-accent bg-accent/10', badge: 'New' },
-  { id: 'dashboard',    label: 'Dashboard',        icon: LayoutDashboard, component: TutorialDashboard,   color: 'text-primary bg-primary/10' },
-  { id: 'new-case',     label: 'New Case Review',  icon: Plus,            component: TutorialNewCase,     color: 'text-green-700 bg-green-100' },
-  { id: 'rounds',       label: 'AI Rounds',        icon: Radio,           component: TutorialRounds,      color: 'text-orange-600 bg-orange-100', badge: 'Featured' },
-  { id: 'case-library', label: 'Case Library',     icon: FileText,        component: TutorialCaseLibrary, color: 'text-accent bg-accent/10' },
-  { id: 'criteria',     label: 'Criteria Database',icon: BookMarked,      component: TutorialCriteria,    color: 'text-purple-600 bg-purple-100' },
-  { id: 'productivity', label: 'Productivity',     icon: BarChart2,       component: TutorialProductivity,color: 'text-chart-3 bg-chart-3/10' },
-  { id: 'screenshots', label: 'Screenshots',      icon: Camera,          component: ScreenshotDownloader, color: 'text-rose-600 bg-rose-100', badge: 'Download' },
+  { id: 'dashboard',    label: 'Dashboard',         icon: LayoutDashboard,  component: TutorialDashboard,   color: 'text-primary bg-primary/10' },
+  { id: 'new-case',     label: 'New Case Review',   icon: Plus,             component: TutorialNewCase,     color: 'text-green-700 bg-green-100' },
+  { id: 'rounds',       label: 'AI Rounds',         icon: Radio,            component: TutorialRounds,      color: 'text-orange-600 bg-orange-100', badge: 'Featured' },
+  { id: 'case-library', label: 'Case Library',      icon: FileText,         component: TutorialCaseLibrary, color: 'text-accent bg-accent/10' },
+  { id: 'criteria',     label: 'Criteria',          icon: BookMarked,       component: TutorialCriteria,    color: 'text-purple-600 bg-purple-100' },
+  { id: 'productivity', label: 'Productivity',      icon: BarChart2,        component: TutorialProductivity, color: 'text-chart-3 bg-chart-3/10' },
+  { id: 'screenshots',  label: 'Screenshots',       icon: Camera,           component: ScreenshotDownloader, color: 'text-rose-600 bg-rose-100', badge: 'Download' },
 ];
 
 export default function Tutorial() {
