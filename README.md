@@ -1,2 +1,4 @@
-##Welcome to EthicaCare 2.0##
+## Welcome to EthicaCare 2.0 ##
+
+
 The provided documents serve as a comprehensive technical manual for EthicaCare 2.0, an advanced platform designed to streamline utilization management through artificial intelligence. Created by H.U.R.O., the software integrates traditional clinical standards like InterQual and MCG with modern tools such as ambient AI listening and automated SOAP note generation. The guide details several functional modules, including a central dashboard for tracking live statistics and a New Case Review interface for managing patient documentation and payer submissions. Users are also introduced to AI Rounds, which facilitates real-time clinical capture at the bedside, and a Rounds Recall feature for post-session data synchronization. Additionally, the sources outline administrative research tools and a searchable criteria database to ensure clinical decisions align with industry benchmarks. This walkthrough ensures that medical staff can effectively navigate the system to improve workflow efficiency and compliance.
