@@ -1,6 +1,6 @@
 ### Welcome to EthicaCare 2.0 ###
 
-**Bridging Clinical Workflows, AI, and Global Health Research**
+**Bridging Clinical Workflows in Utilization Management, Artificial Intelligence (AI), and Global Health Research**
 
 EthicaCare 2.0, is an advanced platform designed to streamline utilization management through artificial intelligence. Created by H.U.R.O., the software integrates traditional clinical standards like InterQual and MCG with modern tools such as ambient AI listening and automated SOAP note generation. The guide details several functional modules, including a central dashboard for tracking live statistics and a New Case Review interface for managing patient documentation and payer submissions. Users are also introduced to AI Rounds, which facilitates real-time clinical capture at the bedside, and a Rounds Recall feature for post-session data synchronization. Additionally, the sources outline administrative research tools and a searchable criteria database to ensure clinical decisions align with industry benchmarks. 
 
