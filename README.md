@@ -11,7 +11,8 @@ Built with compliance and trust in mind, the app is being developed to reflect p
 As it evolves, the platform will serve as a robust, intuitive ally for modern healthcare research, enabling seamless documentation, secure collaboration, and scalable integration of AI devices across global health ecosystems.
 
 **Guided Walkthrough: Exploring Features, Workflow, and User Experience**
-Finally, users can access the User Guide in the app's sidebar, where a step-by-step walkthrough ensures that clinical staff can effectively navigate the system to enhance workflow efficiency and compliance.
+
+Finally, users can now access the User Guide in the app's sidebar, providing a step-by-step walkthrough that helps clinical staff navigate the system effectively to improve workflow efficiency and compliance. Click the video below for a demonstration..
 
 https://github.com/user-attachments/assets/e5b6b57e-b348-4647-b47c-6e1c9068da73
 
